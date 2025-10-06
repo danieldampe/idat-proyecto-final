@@ -6,7 +6,7 @@ import { Router } from 'wouter'
 
 createRoot(document.getElementById('root') as Container).render(
   <StrictMode>
-    <Router base='https://danieldampe.github.io/idat-proyecto-final'>
+    <Router base='https://danieldampe.github.io/idat-proyecto-final/'>
       <App />
     </Router>
   </StrictMode>
