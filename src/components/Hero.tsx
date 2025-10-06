@@ -1,3 +1,5 @@
+import { Link } from 'react-router'
+
 interface HeroI {
   type: 'HERO' | 'BANNER'
   title: string
@@ -17,9 +19,9 @@ export const Hero: React.FC<HeroI> = ({ type, title, lead, url }) => {
       {isBanner
         ? null
         : (
-          <a className='absolute left-1/2 bottom-4 -translate-x-1/2 hover:scale-125 transition-transform' href='#next'>
+          <Link className='absolute left-1/2 bottom-4 -translate-x-1/2 hover:scale-125 transition-transform' to='\#next'>
             <i className='text-5xl text-white bx bx-arrow-out-down-square-half' />
-          </a>
+          </Link>
           )}
     </article>
   )
