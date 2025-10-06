@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot, type Container } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
-import { Router } from 'wouter'
+import { HashRouter as Router } from 'react-router'
+import App from './App'
 
 createRoot(document.getElementById('root') as Container).render(
   <StrictMode>
-    <Router base='https://danieldampe.github.io/idat-proyecto-final'>
+    <Router>
       <App />
     </Router>
   </StrictMode>

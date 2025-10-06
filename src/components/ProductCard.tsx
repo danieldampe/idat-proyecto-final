@@ -1,6 +1,6 @@
 import type { Product } from '../types'
 import { useCart } from '../hooks/useCart'
-import { Link } from 'wouter'
+import { Link } from 'react-router'
 
 interface ProductCardI extends Product {
   square?: boolean
@@ -13,7 +13,7 @@ export const ProductCard: React.FC<ProductCardI> = ({ id, title, images, descrip
 
   return (
     <article className='space-y-2 hover:[&_.price]:opacity-0 hover:[&_.shop-now]:opacity-100 hover:[&_.show]:opacity-100'>
-      <Link className={`img-container relative block ${square === true ? 'aspect-video md:aspect-square' : ''}`} href={`/products/${id}`}>
+      <Link className={`img-container relative block ${square === true ? 'aspect-video md:aspect-square' : ''}`} to={`/products/${id}`}>
         <img src={images[0]} alt={title} />
         <img className='show absolute top-0 left-0 opacity-0 transition-opacity' src={images[1]} alt={title} />
       </Link>

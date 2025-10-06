@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://danieldampe.github.io/idat-proyecto-final/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -16,8 +15,8 @@
     "@tailwindcss/vite": "^4.1.14",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router": "^7.9.3",
     "tailwindcss": "^4.1.14",
-    "wouter": "^3.7.1",
     "zustand": "^5.0.8"
   },
   "devDependencies": {

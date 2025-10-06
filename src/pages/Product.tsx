@@ -1,4 +1,4 @@
-import { useLocation, useParams } from 'wouter'
+import { useParams } from 'react-router'
 import { useProducts } from '../hooks/useProducts'
 import { useEffect, useRef } from 'react'
 import { useCart } from '../hooks/useCart'
@@ -9,13 +9,11 @@ import { BannerCreatorApp } from '../components/BannerCreatorApp'
 
 export const Product: React.FC = () => {
   const { id: idFromParams } = useParams()
-  const navigation = useLocation()[1]
   const { products, getProductById } = useProducts()
   const { increaseQuantity, addProductToCart, getProductFromCart } = useCart()
   const product = getProductById(Number(idFromParams))
 
   if (product === null) {
-    navigation('/')
     return
   }
 

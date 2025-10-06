@@ -1,4 +1,4 @@
-import { Link } from 'wouter'
+import { Link } from 'react-router'
 import { useModal } from '../hooks/useModal'
 import { Monogram } from './icons/Monogram'
 import { Modal } from './Modal'
@@ -10,7 +10,7 @@ export const Nav: React.FC = () => {
     <>
       <div className='fixed top-0 z-50 w-full p-2 sm:p-4'>
         <div className='flex justify-between items-center p-2 bg-darkblue text-lightpink'>
-          <Link className='hover:text-darkpink' href='/'>
+          <Link className='hover:text-darkpink' to='/'>
             <Monogram />
           </Link>
           <button className='relative' onClick={toggleModal}>
