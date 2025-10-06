@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Monogram Shop page 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GitHub Page: [Monogram Consoles and Modules](https://danieldampe.github.io/idat-proyecto-final/)
 
-Currently, two official plugins are available:
+This is a front-end project built with React that replicates the official Monogram online store — a platform known for its customizable modular console systems featuring dials, sliders, and keys designed to enhance creative workflows 🎛️.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This clone aims to reproduce the original site’s layout, product browsing experience, and interactive components while applying modern development practices such as React Router for navigation, Zustand for state management, and Tailwind CSS for responsive and elegant UI design. 🚀
 
-## React Compiler
+---
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🗂️ Project Structure Overview 🗂️
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+console-components-store/
+├── public/                      # 🖼️ Static assets: icons, images, and favicon
+├── src/
+│   ├── assets/                  # 📊 JSON data (products)
+│   ├── components/
+│   │   ├── icons/               # 🎨 SVG or icon-based components
+│   │   ├── Accordion.tsx        # 📂 Collapsible UI sections
+│   │   ├── BannerCreatorApp.tsx # 🪄 Promotion
+│   │   ├── Cart.tsx             # 🛒 Shopping cart container
+│   │   ├── CartElement.tsx      # 🧾 Individual cart items
+│   │   ├── Controller.tsx       # 🎛️ Control the quantities
+│   │   ├── Footer.tsx           # 🦶 Footer layout
+│   │   ├── Hero.tsx             # 🚀 Hero or main showcase section
+│   │   ├── Modal.tsx            # 💬 Modal window
+│   │   ├── Nav.tsx              # 🧭 Navigation bar
+│   │   ├── ProductCard.tsx      # 🏷️ Product preview card
+│   │   └── ProductsGrid.tsx     # 🧩 Product grid layout
+│   ├── hooks/                   # 🪝 Custom React hooks
+│   │   ├── useCart.ts           # 🛒 Handle cart logic (Zustand)
+│   │   ├── useModal.ts          # 💡 Manage modal window
+│   │   └── useProducts.ts       # 📦 Fetch products
+│   ├── pages/                   # 📄 Main app pages
+│   │   ├── Product.tsx          # 🧰 Product detail page
+│   │   └── Shop.tsx             # 🏬 Main store page
+│   ├── App.tsx                  # ⚙️ Root component and routes
+│   ├── index.css                # 🎨 Global styles (Tailwind)
+│   ├── main.tsx                 # 🚀 App entry point
+│   └── types.d.ts               # 📘 TypeScript type definitions
+├── index.html                   # 🌐 Main HTML template
+├── package.json
+├── vite.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️🔧 Dependencies & Tools Used 🔧🛠️
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Library          | Purpose                                         |
+| ---------------- | ----------------------------------------------- |
+| **react**        | ⚛️ Build UI components & manage app state       |
+| **react-dom**    | 🏗️ Render React components to the DOM          |
+| **react-router** | 🧭 Handle navigation between pages              |
+| **zustand**      | 🐻 Lightweight state management for the cart    |
+| **tailwindcss**  | 🎨 Utility-first CSS framework for fast styling |
+
+> Built with the best modern tools for speed, reliability, and maintainability! 🚀✨
+
+---
+
+## 📚 Best Practices & Tips
+
+* 📁 **Component Organization:** Single responsibility, reusable UI parts
+* 🔄 **Data Management:** Separate data logic from UI components
+* 📱 **Responsive Design:** Mobile-first with flexible grid layouts
+
+---
+
+Made by **Solorzano Mundini Damper Daniel** 💻🖱️
