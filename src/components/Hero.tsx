@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { HashLink as Link } from 'react-router-hash-link'
 
 interface HeroI {
   type: 'HERO' | 'BANNER'
@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroI> = ({ type, title, lead, url }) => {
       {isBanner
         ? null
         : (
-          <Link className='absolute left-1/2 bottom-4 -translate-x-1/2 hover:scale-125 transition-transform' to='\#next'>
+          <Link className='absolute left-1/2 bottom-4 -translate-x-1/2 hover:scale-125 transition-transform' to='/#next'>
             <i className='text-5xl text-white bx bx-arrow-out-down-square-half' />
           </Link>
           )}
